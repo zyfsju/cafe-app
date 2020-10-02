@@ -7,6 +7,16 @@ The application manages the drink menu for a coffee shop. It can:
 3. Allow the shop baristas to see the recipe information.
 4. Allow the shop managers to create new drinks and edit existing drinks.
 
+## Authentication and Authorization
+Set up with [Auth0](https://auth0.com/). The user will be re-directed to an Auth0 page for sign-on and back to the website if the log-on attempt is successful. Role-based access control (RBAC) is enabled. The roles and permissions are as follows:
+1. Barista
+    - `get:drinks-detail`
+2. Manager
+    - `get:drinks-detail`
+    - `post:drinks`
+    - `patch:drinks`
+    - `delete:drinks`
+
 ### Backend
 
 Flask server + SQLAlchemy + SQLite
